@@ -5,15 +5,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<meta name="description" content="Ankur Saha's academic research portfolio covering colloidal assembly, evaporation-induced structuring, bio-polymer encapsulation and small-angle scattering.">
+
 <title>Ankur Saha | Research Portfolio</title>
 
 <style>
 :root {
-    --bg: #0b1422;
-    --panel: #111f32;
-    --blue: #65b9ed;
+    --bg: #0d1523;
+    --panel: #142238;
+    --blue: #80b9e9;
     --text: #edf3fa;
-    --muted: #a7b6c9;
+    --muted: #a8b7ca;
+    --border: #29394e;
 }
 
 * {
@@ -32,17 +35,19 @@ body {
 
 .container {
     width: 88%;
-    max-width: 1150px;
+    max-width: 1250px;
     margin: auto;
 }
 
+/* NAVIGATION */
+
 nav {
-    padding: 20px 0;
-    border-bottom: 1px solid #26354a;
+    padding: 23px 0;
+    border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
-    background: rgba(11,20,34,0.96);
-    z-index: 10;
+    background: rgba(13,21,35,0.97);
+    z-index: 100;
 }
 
 .nav-inner {
@@ -53,8 +58,8 @@ nav {
 }
 
 .logo {
-    font-size: 21px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 750;
     letter-spacing: 2px;
     color: white;
 }
@@ -62,7 +67,7 @@ nav {
 nav a {
     color: var(--muted);
     text-decoration: none;
-    margin-left: 22px;
+    margin-left: 20px;
     font-size: 14px;
 }
 
@@ -70,83 +75,150 @@ nav a:hover {
     color: var(--blue);
 }
 
+/* HERO SECTION */
+
 .hero {
-    padding: 90px 0 70px;
+    padding: 100px 0 85px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
 }
 
 .tag {
     color: var(--blue);
-    font-size: 12px;
+    font-size: 13px;
     letter-spacing: 2px;
     font-weight: 700;
 }
 
 h1 {
-    font-size: clamp(34px, 5vw, 58px);
-    line-height: 1.17;
-    margin: 22px 0;
-    max-width: 900px;
+    font-size: clamp(36px, 4.3vw, 60px);
+    line-height: 1.16;
+    margin: 24px 0;
+    letter-spacing: -1.5px;
 }
 
 .subtitle {
     color: var(--muted);
     font-size: 18px;
-    max-width: 750px;
+    max-width: 690px;
 }
 
-.hero-image {
-    margin-top: 40px;
-    width: 100%;
-    height: 330px;
-    border-radius: 18px;
-    object-fit: cover;
-    background: #162b43;
+.profile {
+    margin-top: 30px;
+    border-left: 3px solid var(--blue);
+    padding-left: 18px;
+}
+
+.profile h3 {
+    font-size: 21px;
+}
+
+.profile p {
+    color: var(--muted);
+    font-size: 14px;
 }
 
 .button {
     display: inline-block;
-    padding: 12px 23px;
+    padding: 13px 25px;
     background: var(--blue);
-    color: #071526;
+    color: #102033;
     text-decoration: none;
     border-radius: 7px;
     font-weight: 700;
-    margin-top: 25px;
+    margin-top: 27px;
+    transition: 0.3s;
 }
 
+.button:hover {
+    background: #a5d2f5;
+    transform: translateY(-2px);
+}
+
+/* REPRESENTATIVE IMAGE PLACEHOLDER */
+
+.hero-image {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #35475e;
+    background:
+        radial-gradient(circle at 50% 45%,
+        #294d70 0%, #192e48 42%, #111f32 100%);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    color: #d8e9f8;
+}
+
+.image-placeholder .symbol {
+    font-size: 75px;
+    margin-bottom: 18px;
+    color: var(--blue);
+}
+
+.image-placeholder p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* GENERAL SECTIONS */
+
 section {
-    padding: 75px 0;
-    border-top: 1px solid #26354a;
+    padding: 80px 0;
+    border-top: 1px solid var(--border);
 }
 
 .section-label {
     color: var(--blue);
     font-size: 12px;
     letter-spacing: 2px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 34px;
     margin: 12px 0 25px;
 }
 
 .description {
     color: var(--muted);
-    max-width: 850px;
+    max-width: 900px;
 }
+
+/* RESEARCH CARDS */
 
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
+    gap: 23px;
     margin-top: 35px;
 }
 
 .card {
     background: var(--panel);
-    padding: 27px;
-    border: 1px solid #263b53;
+    padding: 29px;
+    border: 1px solid var(--border);
     border-radius: 13px;
     transition: 0.3s;
 }
@@ -166,11 +238,13 @@ h2 {
     font-size: 15px;
 }
 
+/* METHODS */
+
 .method-list {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    margin-top: 25px;
+    margin-top: 28px;
 }
 
 .method {
@@ -182,46 +256,129 @@ h2 {
     color: #d7e8f8;
 }
 
-.publication {
-    border-left: 3px solid var(--blue);
+/* PRESENTATIONS AND PUBLICATIONS */
+
+.entry {
     background: var(--panel);
-    padding: 25px;
-    border-radius: 5px;
-    margin-top: 25px;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--blue);
+    padding: 27px;
+    border-radius: 8px;
+    margin-top: 23px;
 }
 
-.publication a {
+.entry h3 {
+    margin-bottom: 10px;
+}
+
+.entry p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.entry a {
+    display: inline-block;
+    margin-top: 13px;
     color: var(--blue);
     text-decoration: none;
 }
 
+.entry a:hover {
+    text-decoration: underline;
+}
+
+/* CONTACT */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.contact-item {
+    background: var(--panel);
+    padding: 21px;
+    border-radius: 9px;
+    border: 1px solid var(--border);
+    transition: 0.3s;
+}
+
+.contact-item:hover {
+    border-color: var(--blue);
+}
+
+.contact-item h3 {
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+
+.contact-item a {
+    color: var(--blue);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    font-size: 14px;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+
 footer {
+    border-top: 1px solid var(--border);
     text-align: center;
     padding: 35px 0;
     color: var(--muted);
     font-size: 13px;
 }
 
-@media(max-width:700px) {
-    .grid {
-        grid-template-columns: 1fr;
+/* RESPONSIVE */
+
+@media(max-width:850px) {
+    .hero-grid {
+        gap: 30px;
     }
 
     nav a {
-        margin-left: 8px;
-        font-size: 12px;
+        margin-left: 10px;
+    }
+}
+
+@media(max-width:650px) {
+    .container {
+        width: 90%;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
     }
 
     .hero {
-        padding: 55px 0;
+        padding: 60px 0;
     }
 
     .hero-image {
-        height: 220px;
+        aspect-ratio: 16 / 10;
+    }
+
+    .grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-inner {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 0 5px;
+        font-size: 12px;
     }
 
     h2 {
-        font-size: 26px;
+        font-size: 27px;
     }
 }
 </style>
@@ -229,136 +386,199 @@ footer {
 
 <body>
 
+<!-- NAVIGATION -->
+
 <nav>
 <div class="container nav-inner">
+
     <div class="logo">ANKUR SAHA.</div>
+
     <div>
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#methods">Methods</a>
+        <a href="#presentations">Presentations</a>
         <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
     </div>
+
 </div>
 </nav>
 
+<!-- HERO -->
+
 <header class="hero container">
 
-    <div class="tag">
-        MATERIALS SCIENCE | SOFT MATTER PHYSICS
+<div class="hero-grid">
+
+    <div>
+
+        <div class="tag">
+            MATERIALS SCIENCE | SOFT MATTER PHYSICS
+        </div>
+
+        <h1>
+            Understanding Structure Formation
+            During Evaporation-Induced Assembly
+        </h1>
+
+        <p class="subtitle">
+            Investigating colloidal interactions, particle organization
+            and bio-polymer encapsulation during contact-free drying
+            of colloidal droplets.
+        </p>
+
+        <div class="profile">
+
+            <h3>Ankur Saha</h3>
+
+            <p>Senior Research Fellow</p>
+
+            <p>
+                Soft and Structural Physics Division (SSPD)
+            </p>
+
+            <p>
+                Bhabha Atomic Research Centre (BARC), Mumbai, India
+            </p>
+
+            <p>
+                Homi Bhabha National Institute (HBNI)
+            </p>
+
+        </div>
+
+        <a class="button" href="#research">
+            Explore My Research →
+        </a>
+
     </div>
 
-    <h1>
-        Understanding Structure Formation
-        During Evaporation-Induced Assembly
-    </h1>
+    <!-- Replace the placeholder with your research image later -->
 
-    <p class="subtitle">
-        Investigating colloidal interactions, particle organization
-        and bio-polymer encapsulation during contact-free drying
-        of colloidal droplets.
-    </p>
+    <div class="hero-image">
 
-    <a class="button" href="#research">
-        Explore My Research →
-    </a>
+        <div class="image-placeholder">
 
-    <img class="hero-image"
-    src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1400"
-    alt="Scientific laboratory research">
+            <div class="symbol">✧</div>
+
+            <h3>Research Visualization</h3>
+
+            <p>
+                A representative scientific image
+                illustrating colloidal assembly,
+                particle organization and encapsulation
+                will be displayed here.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
 
 </header>
+
+<!-- ABOUT -->
 
 <section id="about">
 <div class="container">
 
     <div class="section-label">01 / ABOUT</div>
+
     <h2>Research Overview</h2>
 
     <p class="description">
+
         My research focuses on understanding the complex interplay
         between interparticle interactions, solvent transport,
         evaporation kinetics and structural evolution during
-        evaporation-induced assembly (EIA) of colloidal droplets.
+        evaporation-induced assembly of colloidal droplets.
 
-        The central objective is to understand how particle size,
-        interactions and drying dynamics govern the formation
-        of hierarchical structures and enable the encapsulation
-        of biological and synthetic polymers within nanoparticle
-        shells.
+        A major objective is to elucidate how particle size,
+        interactions and drying dynamics govern hierarchical
+        organization and enable the encapsulation of biological
+        and synthetic polymers within nanoparticle shells.
 
         By combining small-angle scattering experiments,
         electron microscopy and particle dynamics simulations,
         I investigate the structural pathways connecting
         colloidal dispersions to functional dry microgranules.
+
     </p>
 
 </div>
 </section>
 
+<!-- RESEARCH -->
+
 <section id="research">
 <div class="container">
 
-    <div class="section-label">02 / CURRENT RESEARCH</div>
+    <div class="section-label">02 / RESEARCH</div>
+
     <h2>Research Interests</h2>
 
     <div class="grid">
 
         <div class="card">
-            <h3>01. Evaporation-Induced Assembly</h3>
+            <h3>Evaporation-Induced Assembly</h3>
             <p>
-                Understanding particle migration, concentration
-                gradients, interparticle correlations and shell
-                formation during solvent evaporation from
-                colloidal droplets.
+                Investigating particle migration, concentration
+                gradients, interparticle correlations and
+                shell formation during solvent evaporation.
             </p>
         </div>
 
         <div class="card">
-            <h3>02. Bio-polymer Encapsulation</h3>
+            <h3>Bio-polymer Encapsulation</h3>
             <p>
-                Investigating hierarchical silica–nanocellulose
+                Understanding hierarchical silica–nanocellulose
                 architectures and the role of particle size
-                stratification in polymer encapsulation within
-                spray-dried microgranules.
+                stratification in polymer encapsulation.
             </p>
         </div>
 
         <div class="card">
-            <h3>03. Structural Characterization</h3>
+            <h3>Structural Characterization</h3>
             <p>
-                Exploring nanoscale and mesoscale organization
-                using small-angle X-ray and neutron scattering
-                techniques.
+                Investigating nanoscale and mesoscale
+                organization through small-angle X-ray
+                and neutron scattering.
             </p>
         </div>
 
         <div class="card">
-            <h3>04. Particle Dynamics Simulation</h3>
+            <h3>Particle Dynamics Simulation</h3>
             <p>
-                Developing computational models to investigate
-                particle transport, interparticle forces,
-                aggregation and hierarchical packing during
-                droplet drying.
+                Computational modelling of particle transport,
+                interparticle forces, aggregation and
+                hierarchical packing during droplet drying.
             </p>
         </div>
 
     </div>
+
 </div>
 </section>
+
+<!-- METHODS -->
 
 <section id="methods">
 <div class="container">
 
     <div class="section-label">03 / METHODOLOGY</div>
+
     <h2>Experimental & Computational Approaches</h2>
 
     <p class="description">
         Integrating scattering, imaging and computational
-        approaches to establish structure–property relationships
-        in colloidal microgranules.
+        approaches to investigate structural evolution
+        and structure–property relationships.
     </p>
 
     <div class="method-list">
+
         <span class="method">SAXS</span>
         <span class="method">SANS</span>
         <span class="method">MSANS</span>
@@ -366,68 +586,155 @@ footer {
         <span class="method">Particle Dynamics</span>
         <span class="method">Structural Modelling</span>
         <span class="method">Thermal Characterization</span>
+
     </div>
 
 </div>
 </section>
 
+<!-- CONFERENCE PRESENTATIONS -->
+
+<section id="presentations">
+<div class="container">
+
+    <div class="section-label">04 / SCIENTIFIC CONTRIBUTIONS</div>
+
+    <h2>Conference Presentations</h2>
+
+    <p class="description">
+        Research presentations and scientific contributions
+        at conferences, workshops and academic meetings.
+    </p>
+
+    <div class="entry">
+
+        <h3>
+            Small-Angle Scattering Reveals Bio-polymer
+            Encapsulation within Spray-dried Microgranules
+        </h3>
+
+        <p>
+            Conference presentation | 2026
+        </p>
+
+        <p>
+            Investigation of hierarchical silica–nanocellulose
+            structures and polymer encapsulation using
+            small-angle scattering and particle-packing simulations.
+        </p>
+
+        <a href="posters/silica-nc-2026/">
+            Presentation Details →
+        </a>
+
+    </div>
+
+</div>
+</section>
+
+<!-- PUBLICATIONS -->
+
 <section id="publications">
 <div class="container">
 
-    <div class="section-label">04 / PUBLICATIONS</div>
-    <h2>Selected Research Publication</h2>
+    <div class="section-label">05 / PUBLICATIONS</div>
 
-    <div class="publication">
+    <h2>Selected Publications</h2>
+
+    <div class="entry">
+
         <h3>
             Evolution of Interparticle Correlation and
             Size Stratification in an Evaporating
             Colloidal Droplet
         </h3>
 
-        <p style="color:#a7b6c9; margin:12px 0;">
+        <p>
             Langmuir | American Chemical Society
         </p>
 
         <a href="https://doi.org/10.1021/acs.langmuir.6c00188"
-        target="_blank">
-            View Publication ↗
+        target="_blank" rel="noopener">
+            View Published Article ↗
         </a>
+
     </div>
 
 </div>
 </section>
 
-<section>
+<!-- CONTACT -->
+
+<section id="contact">
 <div class="container">
 
-    <div class="section-label">05 / RESEARCH PRESENTATION</div>
-    <h2>Conference Poster</h2>
+    <div class="section-label">06 / CONNECT</div>
+
+    <h2>Contact & Academic Profiles</h2>
 
     <p class="description">
-        Explore the research poster on bio-polymer
-        encapsulation within spray-dried microgranules.
+        For research discussions, scientific collaborations
+        and academic interactions, feel free to connect.
     </p>
 
-    <a class="button" href="poster.pdf" target="_blank">
-        View Poster PDF →
-    </a>
+    <div class="contact-grid">
+
+        <div class="contact-item">
+            <h3>Email</h3>
+            <a href="mailto:saha.ankur2000@gmail.com">
+                saha.ankur2000@gmail.com
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <h3>LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/ankur-saha-b4420524b"
+            target="_blank" rel="noopener">
+                View LinkedIn Profile ↗
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <h3>Google Scholar</h3>
+            <a href="https://scholar.google.com/citations?user=jRZngoAAAAAJ&hl=en"
+            target="_blank" rel="noopener">
+                View Google Scholar ↗
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <h3>ResearchGate</h3>
+            <a href="https://www.researchgate.net/profile/Ankur-Saha-13"
+            target="_blank" rel="noopener">
+                View ResearchGate Profile ↗
+            </a>
+        </div>
+
+    </div>
 
 </div>
 </section>
 
+<!-- FOOTER -->
+
 <footer>
-    <div class="container">
-        <p>
-            Ankur Saha | Senior Research Fellow
-        </p>
-        <p>
-            Soft and Structural Physics Division,
-            Bhabha Atomic Research Centre, Mumbai
-        </p>
-        <p>Homi Bhabha National Institute</p>
-        <br>
-        © 2026 Ankur Saha · Research Portfolio
-    </div>
+
+<div class="container">
+
+    <p>Ankur Saha | Senior Research Fellow</p>
+
+    <p>
+        SSPD, BARC | HBNI | Mumbai, India
+    </p>
+
+    <br>
+
+    <p>
+        © 2026 Ankur Saha · Academic Research Portfolio
+    </p>
+
+</div>
+
 </footer>
 
 </body>
